@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+        <link rel="shortcut icon" type="image/png" href="images/favicon.ico">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <title>Sales Tax Calculator</title>
+    </head>
+
+    <body>
+        <div id="header">
+            <p>ITMD-565 Lab 1 - Daniel S Callegari - dcallegari@hawk.it.edu</p>
+            <h1>Sales Tax Calculator</h1>
+        </div>
+        
+        <div id="calculator">
+            <p>Enter Subtotal and Tax Rate and click the Calculate button to show the sales tax amount and total. Click the clear button to clear out all form fields. Tax rate should be a percentage but do not enter a % sign in the Tax Rate box.</p>
+            
+            <form id="calc">
+                <p>Sub Total: <input type="text" name="sub"><br></p>
+                <p>Rate:   <input type="text" name="rate"><br></p>
+                <p>Sales Tax:  <input type="text" name="tax"
+                disabled><br></p>
+                <p>Total:      <input type="text" name="total" disabled><br></p>
+                
+                <p>
+                    <button type="button" onclick="calcTax()">Calculate Tax and Total</button>
+                    <button type="reset" value="Reset">Clear</button>
+                </p>
+            </form>
+            
+            <script>
+                function calcTax() {
+                    let nSub= document.getElementsByName("sub")[0].value;
+                    let nRate = document.getElementsByName("rate")[0].value;
+                    let nTax = Number(nSub) * Number(nRate/100);
+                    document.getElementsByName("tax")[0].value = nTax;
+                    let nTotal = Number(nSub) + Number(nTax);
+                    document.getElementsByName("total")[0].value = nTotal;
+                }
+            </script>
+        </div>
+
+        <img src="images/salestaxcalc.jpg" alt="Tax Calculator">
+
+        <p id="footer">&copy; 2020 Daniel S Callegari | dcallegari@hawk.iit.edu</p>
+
+    </body>
+</html>
