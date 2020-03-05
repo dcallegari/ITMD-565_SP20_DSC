@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Lab 2: JavaScript Hello World</title>
+</head>
+<body>
+	<script type="text/javascript">
+	// All lab code should be between these two comments
+		function nameChecker() {
+			console.log("Daniel S Callegari - dcallegari@hawk.iit.edu - Lab 2");
+
+			var name = prompt("What is your Name?");
+
+			if (name === null) {
+				return;
+			}
+			else if (name === "") {
+				alert("Hello World! Your did not enter a name.");
+				console.log("Hello World! Your did not enter a name.");
+			}
+			else {
+				alert("Hello ".concat(name)+"!");
+				console.log("Hello ".concat(name, "!"));
+				console.log("Your name has ".concat(name.length, " characters."));
+			}
+		}
+
+		nameChecker();
+	// All lab code should be between these two comments
+	</script>
+</body>
+</html>

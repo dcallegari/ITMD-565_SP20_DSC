@@ -1,0 +1,106 @@
+body {
+    font-family: 'Ubuntu', sans-serif;
+    background-image: url("images/banking.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;
+}
+
+#header {
+    display: block;
+    max-width: 1000px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 8px;
+    padding: 4px;
+    background-color: lightblue;
+}
+
+#header p {
+    font-size: 20px;
+}
+
+#calculator {
+    display: block;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 32px;
+    margin-bottom: 32px;
+    padding: 8px;
+    border: 4px;
+    border-style: solid;
+    border-color: black;
+    background-color: grey;
+}
+
+#calculator p {
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 18px;
+}
+
+#calc {
+    max-width: 325px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: right;
+}
+
+#calc p {
+    font-size: 16px;
+}
+
+#calc input {
+    text-align: right;
+    width: 210px;
+}
+
+#calc button {
+    margin-left: 4px;
+    margin-right: 4px;
+    margin-top: 2px;
+    padding: 4px;
+}
+
+img {
+    max-width: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 16px;
+}
+
+#footer {
+    max-width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 12px;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+}
+
+@media only screen and (max-width: 600px) {
+
+    #header p, h1 {
+        font-size: 80%;
+    }
+
+    #calculator p {
+        font-size: 80%;
+    }
+    
+    img {
+        max-width: 150px;
+    }
+
+    #footer {
+        max-width: 100%;
+    }
+
+}
